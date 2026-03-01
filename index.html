@@ -1,1 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jebsoft sas | Soluciones de Software de Alto Impacto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-purple: #8A2BE2; /* Basado en el logo [2] */
+            --electric-blue: #00BFFF; /* Basado en el logo [2] */
+            --dark-bg: #0a0a0c;
+            --card-bg: #16161a;
+            --text-light: #f4f4f9;
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        nav {
+            padding: 1.5rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10, 10, 12, 0.9);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-img {
+            height: 40px; /* Aquí se visualizará el logo de jebsoft [2] */
+            border-radius: 50%;
+        }
+
+        .brand-name {
+            font-weight: 800;
+            font-size: 1.5rem;
+            letter-spacing: -1px;
+            background: linear-gradient(45deg, var(--primary-purple), var(--electric-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Hero Section */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 10%;
+            background: radial-gradient(circle at 50% 50%, #1e1035 0%, #0a0a0c 70%);
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .highlight {
+            color: var(--electric-blue);
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            max-width: 700px;
+            color: #b0b0b0;
+            margin-bottom: 2rem;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid #333;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-purple);
+        }
+
+        .service-card h3 {
+            margin-bottom: 1rem;
+            color: var(--electric-blue);
+        }
+
+        /* Tech Stack */
+        .tech-stack {
+            padding: 50px 10%;
+            background: #111;
+            text-align: center;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 2rem;
+        }
+
+        .tag {
+            background: #222;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            border: 1px solid #444;
+        }
+
+        /* Footer */
+        footer {
+            padding: 50px 10%;
+            text-align: center;
+            border-top: 1px solid #222;
+        }
+
+        .btn {
+            background: linear-gradient(45deg, var(--primary-purple), var(--electric-blue));
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-container">
+            <!-- Referencia al logo de jebsoft sas [2] -->
+            <img src="logo.jpeg" alt="jebsoft logo" class="logo-img">
+            <span class="brand-name">jebsoft sas</span>
+        </div>
+        <div>
+            <a href="#contacto" class="btn" style="padding: 8px 20px; font-size: 0.9rem;">Contáctanos</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Ingeniería de Software de <span class="highlight">Clase Mundial</span></h1>
+        <p class="hero-subtitle">
+            Transformamos negocios mediante soluciones escalables en la nube, 
+            respaldadas por más de 19 años de experiencia liderando proyectos críticos en el sector energético y empresarial [1, 3].
+        </p>
+        <a href="#servicios" class="btn">Explorar Servicios</a>
+    </header>
+
+    <section class="services" id="servicios">
+        <h2 class="section-title">Nuestros Servicios</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Desarrollo Web & Full Stack</h3>
+                <p>Construcción de aplicaciones SPA modernas utilizando Angular y React, integradas con robustos backends en .NET 6+ [4, 5].</p>
+            </div>
+            <div class="service-card">
+                <h3>Migración y Nube (Cloud)</h3>
+                <p>Expertos en migración de sistemas on-premises hacia Azure y AWS, optimizando costos y escalabilidad con arquitecturas serverless [6-8].</p>
+            </div>
+            <div class="service-card">
+                <h3>Modernización de Sistemas</h3>
+                <p>Evolución de aplicaciones legacy (VB6, .NET Framework) hacia tecnologías de última generación y contenedores Docker [4, 8].</p>
+            </div>
+            <div class="service-card">
+                <h3>Arquitectura Empresarial</h3>
+                <p>Diseño de sistemas distribuidos, microservicios y gestión de APIs (APIM) alineados con los objetivos estratégicos de su negocio [7, 9].</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="tech-stack">
+        <h2>Tecnologías Core</h2>
+        <div class="tech-tags">
+            <span class="tag">.NET 6+ / C#</span>
+            <span class="tag">Angular</span>
+            <span class="tag">React</span>
+            <span class="tag">Azure & AWS</span>
+            <span class="tag">SQL Server & Oracle</span>
+            <span class="tag">Docker</span>
+            <span class="tag">CI/CD Pipelines</span>
+            <span class="tag">T-SQL / PL/SQL</span>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <h2>¿Listo para innovar con jebsoft?</h2>
+        <p>Liderazgo técnico y excelencia en desarrollo para su próximo gran proyecto.</p>
+        <p style="margin-top: 20px; color: var(--electric-blue);">jebsoftsas@gmail.com | +57 3128823506 [1]</p>
+        <div style="margin-top: 40px; font-size: 0.8rem; color: #555;">
+            &copy; 2026 jebsoft sas. Todos los derechos reservados.
+        </div>
+    </footer>
+
+</body>
+</html>
